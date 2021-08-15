@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#Nombre: Luis Basantes
 
-Things you may want to cover:
+#Correo: ing.lbasantesv@gmail.com
 
-* Ruby version
+# Descripcion: Importar la base de datos que les comparto en el drive
 
-* System dependencies
+# Link: https://drive.google.com/drive/folders/1BZ1Wj4lUZCZ37vXBS40izGHg9_Po0LwB?usp=sharing
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
