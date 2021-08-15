@@ -1,0 +1,67 @@
+<style>
+  .TablaPrincipal{
+    width: 100%; 
+    text-align: center;
+    background: black;
+  }
+
+  .TablaCabecera{
+    background-color: aliceblue;
+  }
+
+  .TablaCuerpo{
+    background-color: white;
+  }
+
+  td {
+      padding: 2px;
+  }
+
+  th {
+    padding-bottom: 0px;
+    padding: 2px;
+  }
+</style>
+
+
+
+<p id="notice"><%= notice %></p>
+
+<h1>Tiendas</h1>
+
+<table class="TablaPrincipal">
+
+  <thead class="TablaCabecera">
+    <tr>
+      <th>Nombre</th>
+      <th>Calle</th>
+      <th>Numero</th>
+      <th>Codigo Postal</th>
+      <th>Pais</th>
+      <th>Producto</th>
+      <th colspan="3">Acciones</th>
+    </tr>
+  </thead>
+
+  <tbody class="TablaCuerpo">
+    <% @stores.each do |store| %>
+      <tr>
+        <td><%= store.Name %></td>
+        <td><%= store.Street %></td>
+        <td><%= store.Number %></td>
+        <td><%= store.ZipCode %></td>
+        <td><%= store.Country %></td>
+        <td><%= store.Products %></td>
+        <td><%= link_to 'Ver', store %></td>
+        <td><%= link_to 'Editar', edit_store_path(store) %></td>
+        <td><%= link_to 'Eliminar', store, method: :delete, data: { confirm: 'Seguro de Elimnar?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo', new_store_path %>
+
+<%= link_to 'Atras', "../" %>

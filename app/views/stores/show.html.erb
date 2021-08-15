@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @store.Name %>
+</p>
+
+<p>
+  <strong>Calle:</strong>
+  <%= @store.Street %>
+</p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @store.Number %>
+</p>
+
+<p>
+  <strong>Codigo Postal:</strong>
+  <%= @store.ZipCode %>
+</p>
+
+<p>
+  <strong>Pais:</strong>
+  <%= @store.Country %>
+</p>
+
+<p>
+  <strong>Producto:</strong>
+  <%= @store.Products %>
+</p>
+
+<%= link_to 'Editar', edit_store_path(@store) %> |
+<%= link_to 'Atras', stores_path %>

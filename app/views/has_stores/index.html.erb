@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Has Stores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Store</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @has_stores.each do |has_store| %>
+      <tr>
+        <td><%= has_store.Product %></td>
+        <td><%= has_store.Store %></td>
+        <td><%= link_to 'Show', has_store %></td>
+        <td><%= link_to 'Edit', edit_has_store_path(has_store) %></td>
+        <td><%= link_to 'Destroy', has_store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Has Store', new_has_store_path %>

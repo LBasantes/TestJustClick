@@ -1,0 +1,27 @@
+<%= form_with(model: has_store) do |form| %>
+  <% if has_store.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(has_store.errors.count, "error") %> prohibited this has_store from being saved:</h2>
+
+      <ul>
+        <% has_store.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Product %>
+    <%= form.text_field :Product %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Store %>
+    <%= form.text_field :Store %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

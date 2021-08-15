@@ -1,0 +1,55 @@
+<style>
+  .TablaPrincipal{
+    width: 100%; 
+    text-align: center;
+    background: black;
+  }
+
+  .TablaCabecera{
+    background-color: aliceblue;
+  }
+
+  .TablaCuerpo{
+    background-color: white;
+  }
+
+  td {
+      padding: 2px;
+  }
+
+  th {
+    padding-bottom: 0px;
+    padding: 2px;
+  }
+</style>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Categorias</h1>
+
+<table class="TablaPrincipal">
+  <thead class="TablaCabecera">
+    <tr>
+      <th>Nombre</th>
+      <th>Clave</th>
+      <th colspan="3">Acciones</th>
+    </tr>
+  </thead>
+
+  <tbody class="TablaCuerpo">
+    <% @categories.each do |category| %>
+      <tr>
+        <td><%= category.Name %></td>
+        <td><%= category.Keywords %></td>
+        <td><%= link_to 'Ver', category %></td>
+        <td><%= link_to 'Editar', edit_category_path(category) %></td>
+        <td><%= link_to 'Eliminar', category, method: :delete, data: { confirm: 'Seguro de Elimnar?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo', new_category_path %>
+<%= link_to 'Atras', "../" %>

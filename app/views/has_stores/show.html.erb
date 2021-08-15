@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @has_store.Product %>
+</p>
+
+<p>
+  <strong>Store:</strong>
+  <%= @has_store.Store %>
+</p>
+
+<%= link_to 'Edit', edit_has_store_path(@has_store) %> |
+<%= link_to 'Back', has_stores_path %>
